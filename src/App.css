@@ -1,0 +1,80 @@
+.event-shell {
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.event-frame {
+  padding-top: calc(0.75rem + env(safe-area-inset-top));
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+}
+
+.event-orb {
+  pointer-events: none;
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(24px);
+  opacity: 0.85;
+}
+
+.event-orb-a {
+  left: -4rem;
+  top: 5rem;
+  height: 15rem;
+  width: 15rem;
+  background: rgba(18, 181, 203, 0.18);
+}
+
+.event-orb-b {
+  right: -3rem;
+  top: 18rem;
+  height: 18rem;
+  width: 18rem;
+  background: rgba(255, 156, 102, 0.18);
+}
+
+.event-orb-c {
+  bottom: -4rem;
+  left: 38%;
+  height: 14rem;
+  width: 14rem;
+  background: rgba(79, 116, 255, 0.12);
+}
+
+.grid-board-shell {
+  position: relative;
+}
+
+.grid-board-shell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 2rem;
+  background-image: linear-gradient(
+      rgba(148, 163, 184, 0.15) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.15) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.dark .grid-board-shell::before {
+  background-image: linear-gradient(
+      rgba(148, 163, 184, 0.12) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
+  opacity: 0.18;
+}
+
+.mobile-board-stage {
+  min-height: 0;
+}
+
+@media (min-width: 640px) {
+  .mobile-board-stage {
+    min-height: 32.5rem;
+  }
+}
