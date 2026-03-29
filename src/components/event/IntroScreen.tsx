@@ -24,7 +24,7 @@ export const IntroScreen = ({ missions, poolSize, onStart }: Props) => {
             клубом.
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-sm text-slate-700 dark:text-slate-200">
-            <div className="rounded-full bg-slate-900 px-4 py-2 font-medium text-white dark:bg-teal-500 dark:text-slate-950">
+            <div className="dark:text-slate-950 rounded-full bg-slate-900 px-4 py-2 font-medium text-white dark:bg-teal-500">
               3 миссии подряд
             </div>
             <div className="rounded-full bg-white px-4 py-2 font-medium shadow-sm ring-1 ring-slate-200 dark:bg-slate-900/80 dark:ring-white/10">
@@ -39,13 +39,13 @@ export const IntroScreen = ({ missions, poolSize, onStart }: Props) => {
           </div>
           <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-500 dark:text-slate-400">
             При каждом новом прохождении маршрут собирается заново, поэтому
-            слова и подсказки меняются и не повторяются, пока не закончится
-            весь пул.
+            слова и подсказки меняются и не повторяются, пока не закончится весь
+            пул.
           </p>
           <button
             type="button"
             onClick={onStart}
-            className="mt-8 inline-flex items-center rounded-full bg-slate-900 px-7 py-4 text-base font-semibold text-white transition hover:-translate-y-0.5 hover:bg-slate-800 dark:bg-teal-500 dark:text-slate-950 dark:hover:bg-teal-400"
+            className="dark:text-slate-950 mt-8 inline-flex items-center rounded-full bg-slate-900 px-7 py-4 text-base font-semibold text-white transition hover:-translate-y-0.5 hover:bg-slate-800 dark:bg-teal-500 dark:hover:bg-teal-400"
           >
             Начать маршрут
           </button>

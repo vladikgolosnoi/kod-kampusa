@@ -36,8 +36,12 @@ export const MissionCheckpointModal = ({
         <div className="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-400 dark:text-slate-400">
           {mission.eyebrow}
         </div>
-        <h4 className="text-2xl font-semibold text-slate-900 dark:text-white">{mission.word}</h4>
-        <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">{mission.summary}</p>
+        <h4 className="text-2xl font-semibold text-slate-900 dark:text-white">
+          {mission.word}
+        </h4>
+        <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
+          {mission.summary}
+        </p>
         <p className="mt-3 rounded-2xl bg-slate-50 px-4 py-3 text-sm leading-7 text-slate-600 dark:bg-slate-900/95 dark:text-slate-300">
           {mission.clubNote}
         </p>
@@ -62,7 +66,7 @@ export const MissionCheckpointModal = ({
         <button
           type="button"
           onClick={handleClose}
-          className="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-slate-900 px-5 py-3 text-base font-semibold text-white transition hover:bg-slate-800 dark:bg-teal-500 dark:text-slate-950 dark:hover:bg-teal-400"
+          className="dark:text-slate-950 mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-slate-900 px-5 py-3 text-base font-semibold text-white transition hover:bg-slate-800 dark:bg-teal-500 dark:hover:bg-teal-400"
         >
           {buttonText}
         </button>

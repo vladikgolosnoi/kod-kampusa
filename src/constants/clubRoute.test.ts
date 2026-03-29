@@ -1,6 +1,6 @@
 import {
-  buildClubRoute,
   CLUB_MISSION_LIBRARY,
+  buildClubRoute,
   getMissionPoolSize,
 } from './clubRoute'
 

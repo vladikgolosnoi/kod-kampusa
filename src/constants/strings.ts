@@ -1,10 +1,6 @@
 export const GAME_TITLE = process.env.REACT_APP_GAME_NAME!
 
-export const WIN_MESSAGES = [
-  'Отлично!',
-  'Так держать!',
-  'Сильная попытка!',
-]
+export const WIN_MESSAGES = ['Отлично!', 'Так держать!', 'Сильная попытка!']
 export const GAME_COPIED_MESSAGE = 'Результат скопирован'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'Нужно заполнить все клетки'
 export const WORD_NOT_FOUND_MESSAGE = 'Такого слова нет в словаре'
@@ -12,8 +8,7 @@ export const HARD_MODE_ALERT_MESSAGE =
   'Сложный режим можно включить только в начале игры'
 export const HARD_MODE_DESCRIPTION =
   'Все открытые подсказки нужно использовать в следующих попытках'
-export const HIGH_CONTRAST_MODE_DESCRIPTION =
-  'Повышенная различимость цветов'
+export const HIGH_CONTRAST_MODE_DESCRIPTION = 'Повышенная различимость цветов'
 export const CORRECT_WORD_MESSAGE = (solution: string) =>
   `Загаданное слово: ${solution}`
 export const WRONG_SPOT_MESSAGE = (guess: string, position: number) =>

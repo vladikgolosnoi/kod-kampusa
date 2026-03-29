@@ -1,10 +1,7 @@
 import { ArrowRightIcon, ClockIcon, ShareIcon } from '@heroicons/react/outline'
 import { format } from 'date-fns'
 
-import {
-  DATE_LOCALE,
-  ENABLE_MIGRATE_STATS,
-} from '../../constants/settings'
+import { DATE_LOCALE, ENABLE_MIGRATE_STATS } from '../../constants/settings'
 import {
   ARCHIVE_GAMEDATE_TEXT,
   CURRENT_ROUND_TEXT,

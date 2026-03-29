@@ -27,7 +27,7 @@ export const BaseModal = ({ title, children, isOpen, handleClose }: Props) => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Dialog.Overlay className="fixed inset-0 min-h-screen bg-slate-950/60 backdrop-blur-sm transition-opacity dark:bg-slate-950/80" />
+            <Dialog.Overlay className="bg-slate-950/60 dark:bg-slate-950/80 fixed inset-0 min-h-screen backdrop-blur-sm transition-opacity" />
           </Transition.Child>
           <Transition.Child
             as={Fragment}
@@ -38,7 +38,7 @@ export const BaseModal = ({ title, children, isOpen, handleClose }: Props) => {
             leaveFrom="opacity-100 translate-y-0 sm:scale-100"
             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
-            <div className="inline-block max-h-[calc(100dvh-2rem)] transform overflow-x-hidden overflow-y-auto rounded-[2rem] border border-slate-200 bg-white px-5 pb-5 pt-6 text-left align-bottom shadow-[0_30px_80px_rgba(14,35,56,0.18)] transition-all backdrop-blur-xl dark:border-white/10 dark:bg-slate-900 sm:my-8 sm:max-h-[min(90vh,48rem)] sm:w-full sm:max-w-lg sm:p-7 sm:align-middle">
+            <div className="inline-block max-h-[calc(100dvh-2rem)] transform overflow-y-auto overflow-x-hidden rounded-[2rem] border border-slate-200 bg-white px-5 pb-5 pt-6 text-left align-bottom shadow-[0_30px_80px_rgba(14,35,56,0.18)] backdrop-blur-xl transition-all dark:border-white/10 dark:bg-slate-900 sm:my-8 sm:max-h-[min(90vh,48rem)] sm:w-full sm:max-w-lg sm:p-7 sm:align-middle">
               <button
                 onClick={() => handleClose()}
                 tabIndex={0}
@@ -51,7 +51,7 @@ export const BaseModal = ({ title, children, isOpen, handleClose }: Props) => {
                 <div className="text-center">
                   <Dialog.Title
                     as="h3"
-                    className="brand-title pr-12 text-[clamp(1.75rem,6vw,2rem)] font-medium leading-[1.15] text-slate-950 dark:text-white"
+                    className="brand-title text-slate-950 pr-12 text-[clamp(1.75rem,6vw,2rem)] font-medium leading-[1.15] dark:text-white"
                   >
                     {title}
                   </Dialog.Title>

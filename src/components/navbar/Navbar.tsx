@@ -1,7 +1,4 @@
-import {
-  CogIcon,
-  InformationCircleIcon,
-} from '@heroicons/react/outline'
+import { CogIcon, InformationCircleIcon } from '@heroicons/react/outline'
 
 import { GAME_TITLE } from '../../constants/strings'
 
@@ -16,7 +13,7 @@ export const Navbar = ({
 }: Props) => {
   return (
     <div className="mb-6">
-      <div className="flex items-center justify-between rounded-full border border-white/60 bg-white/70 px-4 py-3 shadow-[0_20px_50px_rgba(14,35,56,0.1)] backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/95">
+      <div className="dark:bg-slate-950/95 flex items-center justify-between rounded-full border border-white/60 bg-white/70 px-4 py-3 shadow-[0_20px_50px_rgba(14,35,56,0.1)] backdrop-blur-xl dark:border-white/10">
         <div className="flex">
           <InformationCircleIcon
             className="h-6 w-6 cursor-pointer stroke-slate-700 transition hover:scale-110 dark:stroke-slate-200"

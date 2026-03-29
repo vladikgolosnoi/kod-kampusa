@@ -39,21 +39,21 @@ export const ResultScreen = ({
           <p className="mt-4 max-w-xl text-lg leading-8 text-slate-600 dark:text-slate-300">
             {profile.description}
           </p>
-          <div className="mt-6 rounded-[1.5rem] bg-slate-900 px-5 py-4 text-sm leading-7 text-slate-100 dark:bg-slate-950/90 dark:text-slate-100">
+          <div className="dark:bg-slate-950/90 mt-6 rounded-[1.5rem] bg-slate-900 px-5 py-4 text-sm leading-7 text-slate-100 dark:text-slate-100">
             {profile.action}
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
             <button
               type="button"
               onClick={onRestart}
-              className="inline-flex rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 dark:bg-teal-500 dark:text-slate-950 dark:hover:bg-teal-400"
+              className="dark:text-slate-950 inline-flex rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 dark:bg-teal-500 dark:hover:bg-teal-400"
             >
               Пройти новый маршрут
             </button>
             <button
               type="button"
               onClick={onShare}
-              className="inline-flex rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 dark:border-white/10 dark:bg-slate-950/90 dark:text-slate-100 dark:hover:bg-slate-900/95"
+              className="dark:bg-slate-950/90 inline-flex rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 dark:border-white/10 dark:text-slate-100 dark:hover:bg-slate-900/95"
             >
               Скопировать результат
             </button>
@@ -61,7 +61,7 @@ export const ResultScreen = ({
               href="https://skf.mtuci.ru/"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 dark:border-white/10 dark:bg-slate-950/90 dark:text-slate-100 dark:hover:bg-slate-900/95"
+              className="dark:bg-slate-950/90 inline-flex rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 dark:border-white/10 dark:text-slate-100 dark:hover:bg-slate-900/95"
             >
               Сайт СКФ МТУСИ
             </a>
@@ -74,7 +74,7 @@ export const ResultScreen = ({
             return (
               <div
                 key={mission.id}
-                className="rounded-[1.5rem] border border-white/70 bg-white/85 p-4 shadow-[0_18px_50px_rgba(15,23,42,0.08)] dark:border-white/10 dark:bg-slate-950/90"
+                className="bg-white/85 dark:bg-slate-950/90 rounded-[1.5rem] border border-white/70 p-4 shadow-[0_18px_50px_rgba(15,23,42,0.08)] dark:border-white/10"
               >
                 <div className="flex items-start justify-between gap-3">
                   <div>

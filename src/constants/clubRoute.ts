@@ -286,12 +286,12 @@ const cloneHistory = (history: ClubRouteHistory): ClubRouteHistory => ({
   security: [...history.security],
 })
 
-const pickRandomItem = <T,>(items: T[], random: () => number) => {
+const pickRandomItem = <T>(items: T[], random: () => number) => {
   const index = Math.floor(random() * items.length)
   return items[index]
 }
 
-const shuffleItems = <T,>(items: T[], random: () => number) => {
+const shuffleItems = <T>(items: T[], random: () => number) => {
   const next = [...items]
 
   for (let index = next.length - 1; index > 0; index--) {
@@ -315,9 +315,10 @@ const consumeTrackMission = (
   const source = availableMissions.length > 0 ? availableMissions : pool
   const selectedMission = pickRandomItem(source, random)
 
-  history[track] = availableMissions.length > 0
-    ? [...trackHistory, selectedMission.id]
-    : [selectedMission.id]
+  history[track] =
+    availableMissions.length > 0
+      ? [...trackHistory, selectedMission.id]
+      : [selectedMission.id]
 
   return selectedMission
 }
@@ -372,7 +373,8 @@ export const TRACK_PROFILES: TrackProfile[] = [
     title: 'Твой трек: AI и умные продукты',
     description:
       'Тебя цепляют идеи, где технологии взаимодействуют с человеком: боты, автоматизация, генерация и цифровые сервисы.',
-    action: 'Подойди к зоне клуба, где показывают AI, приложения и программные проекты.',
+    action:
+      'Подойди к зоне клуба, где показывают AI, приложения и программные проекты.',
   },
   {
     track: 'networks',
@@ -380,7 +382,8 @@ export const TRACK_PROFILES: TrackProfile[] = [
     title: 'Твой трек: сети и телеком',
     description:
       'Тебе ближе инфраструктура, интернет и связь. Это направление про то, как цифровой мир работает под капотом.',
-    action: 'Ищи стенд, где рассказывают про телеком, сети, веб и связь в реальных системах.',
+    action:
+      'Ищи стенд, где рассказывают про телеком, сети, веб и связь в реальных системах.',
   },
   {
     track: 'security',
@@ -388,7 +391,8 @@ export const TRACK_PROFILES: TrackProfile[] = [
     title: 'Твой трек: цифровая защита',
     description:
       'Ты быстро считываешь темы про доступ, безопасность и надёжность. Это хороший вход в мир инфобеза.',
-    action: 'Загляни к ребятам, которые показывают кейсы по защите данных, доступу и кибербезопасности.',
+    action:
+      'Загляни к ребятам, которые показывают кейсы по защите данных, доступу и кибербезопасности.',
   },
   {
     track: 'generalist',
@@ -396,6 +400,7 @@ export const TRACK_PROFILES: TrackProfile[] = [
     title: 'Твой трек: универсал IT-клуба',
     description:
       'Ты одинаково уверенно прошёл разные темы. Значит, тебе подойдёт формат клуба, где можно попробовать всё понемногу.',
-    action: 'Начни с общего стенда клуба и выбери, какой проект хочется потрогать первым.',
+    action:
+      'Начни с общего стенда клуба и выбери, какой проект хочется потрогать первым.',
   },
 ]

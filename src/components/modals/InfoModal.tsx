@@ -8,7 +8,11 @@ type Props = {
 
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
-    <BaseModal title="Как пройти маршрут" isOpen={isOpen} handleClose={handleClose}>
+    <BaseModal
+      title="Как пройти маршрут"
+      isOpen={isOpen}
+      handleClose={handleClose}
+    >
       <p className="text-sm leading-7 text-slate-700 dark:text-slate-300">
         В игре 3 короткие миссии по темам IT-клуба. В каждой миссии нужно
         угадать слово максимум за 6 попыток. Маршрут меняется при каждом новом
