@@ -73,9 +73,6 @@ const getRouteProfile = (results: MissionResult[]) => {
 }
 
 function App() {
-  const prefersDarkMode = window.matchMedia(
-    '(prefers-color-scheme: dark)'
-  ).matches
   const [phase, setPhase] = useState<Phase>('intro')
   const [route, setRoute] = useState<ClubMission[]>(() => getNextClubRoute())
   const [missionIndex, setMissionIndex] = useState(0)
@@ -93,9 +90,7 @@ function App() {
     usedHint: boolean
   } | null>(null)
   const [isDarkMode, setIsDarkMode] = useState(
-    localStorage.getItem('theme')
-      ? localStorage.getItem('theme') === 'dark'
-      : prefersDarkMode
+    localStorage.getItem('theme') === 'dark'
   )
   const [isHighContrastMode, setIsHighContrastMode] = useState(
     getStoredIsHighContrastMode()
@@ -137,6 +132,7 @@ function App() {
     } else {
       document.documentElement.classList.remove('dark')
     }
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light')
 
     if (isHighContrastMode) {
       document.documentElement.classList.add('high-contrast')
@@ -221,7 +217,6 @@ function App() {
 
   const handleDarkMode = (isDark: boolean) => {
     setIsDarkMode(isDark)
-    localStorage.setItem('theme', isDark ? 'dark' : 'light')
   }
 
   const handleHardMode = (isHard: boolean) => {
@@ -257,6 +252,19 @@ function App() {
     }
 
     setCurrentGuess((value) => value.slice(0, -1))
+  }
+
+  const onSetGuess = (value: string) => {
+    if (
+      !isPlaying ||
+      isRevealing ||
+      guesses.length >= MAX_CHALLENGES ||
+      unicodeLength(value) > solution.length
+    ) {
+      return
+    }
+
+    setCurrentGuess(value)
   }
 
   const onEnter = () => {
@@ -535,6 +543,8 @@ function App() {
                         onChar={onChar}
                         onDelete={onDelete}
                         onEnter={onEnter}
+                        onSetGuess={onSetGuess}
+                        currentGuess={currentGuess}
                         solution={solution}
                         guesses={guesses}
                         isRevealing={isRevealing}

@@ -18,7 +18,7 @@ type Props = {
 export const Key = ({
   children,
   status,
-  width = 'clamp(1.35rem, 6.4vw, 2.5rem)',
+  width = 'clamp(1.6rem, 3vw, 2.85rem)',
   value,
   onClick,
   isRevealing,
@@ -38,7 +38,7 @@ export const Key = ({
       : ''
 
   const classes = classnames(
-    'mx-[2px] mb-[4px] flex h-[clamp(2.55rem,9vw,3.5rem)] items-center justify-center rounded-[1rem] border border-transparent px-1 text-[clamp(0.66rem,2.8vw,0.9rem)] font-bold shadow-[0_10px_20px_rgba(15,23,42,0.05)] transition duration-200 cursor-pointer select-none dark:text-white',
+    'mb-[4px] flex h-[clamp(3rem,5vw,3.8rem)] items-center justify-center rounded-[1rem] border border-transparent px-1 text-[clamp(0.8rem,1.4vw,0.95rem)] font-bold shadow-[0_10px_20px_rgba(15,23,42,0.05)] transition duration-200 cursor-pointer select-none dark:text-white',
     {
       'transition ease-in-out': isRevealing,
       'bg-slate-100 text-slate-800 hover:-translate-y-0.5 hover:bg-slate-200 active:bg-slate-300 dark:bg-slate-700':

@@ -39,15 +39,15 @@ body {
   color: #162439;
   background: radial-gradient(
       circle at top left,
-      rgba(18, 181, 203, 0.16),
+      rgba(18, 181, 203, 0.1),
       transparent 28%
     ),
     radial-gradient(
       circle at 85% 20%,
-      rgba(255, 156, 102, 0.24),
+      rgba(255, 156, 102, 0.14),
       transparent 24%
     ),
-    linear-gradient(180deg, #f6f5ef 0%, #eef5f9 100%);
+    linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
 }
 
 .dark body {

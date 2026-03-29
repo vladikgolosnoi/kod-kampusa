@@ -3,7 +3,7 @@ on:
   pull_request:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   test:
@@ -13,4 +13,4 @@ jobs:
       - run: |
           npm install
       - run: |
-          npm run test
+          npm run test -- --watchAll=false
